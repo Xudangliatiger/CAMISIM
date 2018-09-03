@@ -220,7 +220,7 @@ def shuffle_anonymize(fasta_stream, path, to_genome, metadata, sample_name, coun
             )
         )
         for line in fasta_stream:
-            if line.startsiwth(">"):
+            if line.startswith(">"):
                 contig_id = sample_name + str(contig_ids[contignr])
                 contignr += 1
                 name, f, start, t, end, tot, length = line[1:].strip().rsplit("_",6)
